@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fifth Edge Studios</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+  		<link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.3/dist/full.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+        <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+            <span class="font-mono text-5xl countdown">
+                <span style="--value:15;" id="days"></span>
+            </span>
+                days
+                
+        </div> 
+        <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+            <span class="font-mono text-5xl countdown">
+                <span style="--value:10;" id="hours"></span>
+            </span>
+                hours
+                
+        </div> 
+        <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+            <span class="font-mono text-5xl countdown">
+                <span style="--value:24;" id="minutes"></span>
+            </span>
+                min
+                
+        </div> 
+        <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+            <span class="font-mono text-5xl countdown">
+                <span style="--value:60;" id="seconds"></span>
+            </span>
+                sec
+                
+        </div>
+    </div>
+
+    <p id="demo"></p>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Oct 23, 2021 06:00:0").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").style.setProperty('--value',days);
+        document.getElementById("hours").style.setProperty('--value',hours);
+        document.getElementById("minutes").style.setProperty('--value',minutes);
+        document.getElementById("seconds").style.setProperty('--value',seconds);
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+        }, 1000);
+    </script>
+</body>
+</html>

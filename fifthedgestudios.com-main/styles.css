@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+	font-family: "Raleway", sans-serif;
+	color: #EEF4ED;
+
+	text-align: center;
+	font-size: 30px;
+}
+ul {
+	text-align: center;
+}
+/*navigation*/
+.navigation {
+	text-align: center;
+	position: relative;
+	list-style-type: none;
+	overflow: hidden;
+	background-color: #EEF4ED;
+	border-radius: 25px;
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+.navigation2 {
+	padding: 14px;
+	margin-left: 117px; margin-right: 0px;
+	margin: 0;
+	transform: translate(-50%, 0%);
+	float:left;
+	text-align: center;
+	list-style-type: none;
+	overflow: hidden;
+}
+.navigation3 {
+	text-decoration: none;
+	color: #151515;
+	font-size: 30px;
+	transition: color linear 0.1s
+}
+.navigation3:hover {
+	color: #F24333;
+	
+}
+.logo {
+	padding-top:4%;
+	width:30%;
+	height: auto;
+}
+
+/*home screen*/
+.mainheader {
+	margin-top: 25px;
+	font-size: 50px;
+	color: #EEF4ED;
+	text-align: center;
+	position: relative;
+	top: 100px;
+	z-index: 5;
+}
+.mainheader2 {
+	text-align: center;
+	margin-top: -20%;
+	letter-spacing: 100px;
+	color: #ffffff;
+	z-index: -1;
+	font-size: 250px;
+}
+.desc {
+	margin-top: -25px;
+	font-size: 50px;
+	color: #EEF4ED;
+	text-align: center;
+	position: relative;
+	top: 100px;
+	z-index: 1;
+}
+
+.retropalooza {
+	margin-top: 200px;
+	background-color: #151515;
+	border-radius: 25px;
+	border-color: #EEF4ED;
+	color: #EEF4ED;
+	text-align: left;
+	font-size: 20px;
+	width: 30%;
+	padding: 2%;
+}
